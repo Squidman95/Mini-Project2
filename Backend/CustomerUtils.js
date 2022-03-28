@@ -12,7 +12,6 @@ function createCustomer(name, email, password){
         email: email,
         password: password,
     }
-
     userData.addCustomer(newUser);
 }
 
@@ -21,10 +20,19 @@ function deleteCustomer(uuid){
     return userData.customers;
 }
 
-function updateCustomer(uuid){
-    // do stuff
+function updateCustomer(uuid, name, email, password){
+    userData.updateCustomer({
+        id: uuid,
+        name: name,
+        email: email,
+        password: password,
+    });
+}
+
+function getAllCustomers(){
+    return users;
 }
 
 
 
-module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer}
+module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer, getAllCustomers}

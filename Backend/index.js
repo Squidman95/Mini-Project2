@@ -30,6 +30,12 @@ function getAllCustomers(req, res) {
 }
 app.get('/', getAllCustomers);
 
+
+//CUSTOMERS
+app.get('/customers', (req,res) => {
+    res.send(customerUtils.getAllCustomers());
+});
+
 app.get('/customers/:customerId', (req,res) => {
     res.send(customerUtils.getCustomerInfo(req.params.customerId));
 });
@@ -47,6 +53,27 @@ app.post('/customers/:name/:email/:password', (req,res) => {
 });
 
 
+
+//BASKET
+app.get('/customers/:customerId/basket', (req,res) => {
+    res.send(basketUtils.getBasket(req.params.customerId));
+});
+
+app.put('/customers/:customerId/basket/:productId', (req,res) => {
+    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productID));
+});
+
+app.delete('/customers/:customerId/basket/:productId', (req,res) => {
+    res.send(basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId));
+});
+
+app.post('/customers/:customerId/basket', (req,res) => {
+    res.send(basketUtils.createBasket(req.params.customerId));
+});
+
+
+
+//PRODUCTS
 app.get('/products', (req, res) => {
     
     // res.send('List of products');
