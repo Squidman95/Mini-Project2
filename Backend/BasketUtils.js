@@ -39,8 +39,6 @@ function addItemToBasket(uuid, productId, amount = null){
         basket.items.push(item);
         json[index] = basket;    
 
-        // let trendString = JSON.stringify(trendJson, null, 2);
-
         fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
           if (err) throw err;
           console.log('Basket updated!');
@@ -49,8 +47,34 @@ function addItemToBasket(uuid, productId, amount = null){
     });
 }
 
-function deleteProductFromBasket(uuid, item){
-    Basket.removeFromBasket(uuid, item);
+function deleteProductFromBasket(uuid, productId){
+    
+    let item = ProductData.products.filter(product => {return product.id == productId})[0];
+
+    fs.readFile(basketPath, function (err, data) {
+        let json = JSON.parse(data);
+        let basket = json.filter(b => {return b.id == uuid})[0];
+        const index = json.map(b => b.id).indexOf(uuid);
+
+        removeById(basket.items, item.id);
+        json[index] = basket;    
+
+        fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
+          if (err) throw err;
+          console.log('Item deleted from basket!');
+        });
+
+    });
 }
+
+const removeById = (jsonArray, itemId) => {
+    const index = jsonArray.findIndex(element => {
+       return element.id === String(itemId);
+    });
+    if(index === -1){
+       return false;
+    };
+    return !!jsonArray.splice(index, 1);
+ };
 
 module.exports = { getBasket, createBasket, addItemToBasket, deleteProductFromBasket };
