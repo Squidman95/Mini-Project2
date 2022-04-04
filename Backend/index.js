@@ -45,11 +45,11 @@ app.get('/products/:productID', (req, res) => { // Essential
     res.send(productsUtils.getSingleProductInfo(req.params.productID));
 });
 
-app.get('/categories', (req, res) => { // Essential
+app.get('/categories', (req, res) => {          // Essential, doesn't work
     res.send(productsUtils.getCategories());
 });
 
-app.get('/products/:category', (req, res) => { // Essential
+app.get('/products/:category', (req, res) => { // Essential, doesn't work
     res.send(productsUtils.getCategoryItems(req.params.category));
 });
 
