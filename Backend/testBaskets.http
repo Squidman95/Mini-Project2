@@ -1,4 +1,15 @@
-// get all customers
+// get basket by customer id 1
+GET http://localhost:3000/customers/1/basket HTTP/1.1
 
-GET http://localhost:3000/customers HTTP/1.1
+// create new empty basket for customer 1
+POST http://localhost:3000/customers/1/basket HTTP/1.1
+content-type: application/json
 
+{"id":1, "items":[]}
+
+// put product 1 into customer 1's basket
+PUT http://localhost:3000/customers/1/basket/1 HTTP/1.1
+#content-type:application/json
+
+// delete product 1 from customer 1's basket
+DELETE http://localhost:3000/customers/1/basket/1 HTTP/1.1
