@@ -1,0 +1,4 @@
+// get all customers
+
+GET http://localhost:3000/customers HTTP/1.1
+
