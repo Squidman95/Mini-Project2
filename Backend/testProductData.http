@@ -1,0 +1,32 @@
+//essential
+//get all products
+//works
+GET http://localhost:3000/products/ HTTP/1.1
+
+###
+
+//essential
+//get summarized product info of all products
+//works
+GET http://localhost:3000/products/info HTTP/1.1
+
+###
+
+//essential
+//get product info for product id:1
+//works
+GET http://localhost:3000/products/1 HTTP/1.1
+
+###
+
+//essential
+//get summarized info for all categories
+//returns nothing
+GET http://localhost:3000/categories HTTP/1.1
+
+###
+
+//essential
+//get items from category:Food
+//returns nothing
+GET http://localhost:3000/products/Food HTTP/1.1

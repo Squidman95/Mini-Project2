@@ -15,9 +15,9 @@ app.use((req, res, next) => {
     console.log("A new request received at " + Date.now());
     // This function call tells that more processing is required for the current request and is in the next middlewar function/route handler.
     next();  
- });
+});
 
- app.use('/static', express.static('public'));
+app.use('/static', express.static('public'));
 //  app.use(express.static('files'));
 
 app.listen(3000, () => console.log(`[Info] Server listening at http://${hostname}:${port}/`));
@@ -36,7 +36,7 @@ app.get('/products', (req, res) => {        // Essential
     // res.send('List of products');
     let products = productsUtils.getProducts();
     if (products === null || products === undefined) {
-        res.status(500).send('The puppies got loose in the server, so the surver is down');
+        res.status(500).send('The puppies got loose in the server, so the server is down');
     } else {
         res.status(200).send(products);
     }
@@ -45,13 +45,13 @@ app.get('/products', (req, res) => {        // Essential
 app.get('/products/info', (req, res) => {   // Essential
     let productsInfo = productsUtils.getMultipleProductsInfo();
     if (productsInfo === null || productsInfo === undefined) {
-        res.status(500).send('The puppies got loose in the server, so the surver is down');
+        res.status(500).send('The puppies got loose in the server, so the server is down');
     } else {
         res.status(200).send(productsInfo); 
     }
 });
 
-app.get('/products/product/:productID', (req, res) => { // Essential
+app.get('/products/:productID', (req, res) => { // Essential
     let product = productsUtils.getSingleProductInfo(req.params.productID);
     if (product === null || product === undefined) {
         res.status(404).send('Product does not exist');
@@ -60,7 +60,7 @@ app.get('/products/product/:productID', (req, res) => { // Essential
     }
 });
 
-app.get('/products/category', (req, res) => { // Essential
+app.get('/categories', (req, res) => { // Essential
     let productsCat = productsUtils.getCategories();
     if (productsCat === null || productsCat === undefined) {
         res.status(404).send('Category does not exist');
@@ -121,17 +121,12 @@ app.get('/customers/:customerId/basket', (req,res) => {         // Essential
     }
 });
 
-app.post('/customers/:customerId/basket', (req,res) => {        // Essential
-    let basket = basketUtils.createBasket(req.params.customerId);
-    if (basket === null || basket === undefined) {
-        res.status(404).send('Customer does not exist');
-    } else {
-        res.status(201).send(basket);
-    }
+app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
+    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productId));
 });
 
-app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
-    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productID));
+app.post('/customers/:customerId/basket', (req,res) => {       // Essential
+    res.send(basketUtils.createBasket(req.params.customerId));
 });
 
 app.delete('/customers/:customerId/basket/:productId', (req,res) => {   // Essential

@@ -16,15 +16,14 @@ function getSingleProductInfo(itemId){
 }
 
 function getCategoryItems(category){
-    return products.filter(product => product.category === category);
+    return products.filter(product => {return product.category == category});
 }
 
 function getCategories() {
     let array = products.map((product) => {
         return {category: product.category};
     })
-    let categoriesArray = [new Set(array)];
-    return categoriesArray;
+    return array;
 }
 
 module.exports = { getProducts, getMultipleProductsInfo, getSingleProductInfo, getCategoryItems };
