@@ -97,16 +97,16 @@ app.get('/customers/:customerId', (req,res) => {        // Essential
     }
 });
 
-app.put('/customers/:customerId', (req,res) => {        // Non-Essential
-    res.send(customerUtils.updateCustomer(req.params.customerId));
+app.put('/customers/:customerId/:name/:email/:password', (req,res) => {        // Non-Essential
+    res.send(customerUtils.updateCustomer(req.params.customerId, req.params.name, req.params.email, req.params.password));
 });
 
 app.delete('/customers/:customerId', (req,res) => {     // Non-Essential
     res.send(customerUtils.deleteCustomer(req.params.customerId));
 });
 
-app.post('/customers/:name/:email/:password', (req,res) => {    // Non-Essential
-    res.send(customerUtils.createCustomer(req.params.name, req.params.email, req.params.password));
+app.post('/customers/:customerId/:name/:email/:password', (req,res) => {    // Non-Essential
+    res.send(customerUtils.createCustomer(req.params.customerId, req.params.name, req.params.email, req.params.password));
 });
 
 

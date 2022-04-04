@@ -1,9 +1,9 @@
 [
   {
     "id": 0,
-    "name": "Basic",
-    "email": "basic@person.com",
-    "password": "person"
+    "name": "bent",
+    "email": "bent@basicBitchMail.com",
+    "password": "1234"
   },
   {
     "id": 1,
@@ -16,5 +16,11 @@
     "name": "Basic2",
     "email": "basic2@person.com",
     "password": "person"
+  },
+  {
+    "id": 32,
+    "name": "bent",
+    "email": "bent@basicBitchMail.com",
+    "password": "1234"
   }
 ]
