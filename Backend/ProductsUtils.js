@@ -23,7 +23,8 @@ function getCategories() {
     let array = products.map((product) => {
         return {category: product.category};
     })
-    return array;
+    let uniqueCategories = [...new Set(array.map(item => item.category))];
+    return uniqueCategories;
 }
 
 module.exports = { getProducts, getMultipleProductsInfo, getSingleProductInfo, getCategoryItems, getCategories };
