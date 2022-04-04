@@ -122,15 +122,30 @@ app.get('/customers/:customerId/basket', (req,res) => {         // Essential
 });
 
 app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
-    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productId));
+    let basketProduct = basketUtils.addItemToBasket(req.params.customerId, req.params.productId);
+    if (basketProduct === null || basketProduct === undefined) {
+        res.status(404).send('Customer or product does not exists');
+    } else {
+        res.status(200).send(basketProduct);
+    }
 });
 
 app.post('/customers/:customerId/basket', (req,res) => {       // Essential
-    res.send(basketUtils.createBasket(req.params.customerId));
+    let basket = basketUtils.createBasket(req.params.customerId);
+    if(basket === null || basket === undefined) {
+        res.status(404).send('Customer or product does not exists');
+    } else {
+        res.status(200).send(basket);
+    }
 });
 
 app.delete('/customers/:customerId/basket/:productId', (req,res) => {   // Essential
-    res.send(basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId));
+    let basket = basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId);
+    if(basket === null || basket === undefined) {
+        res.status(404).send('Customer or product does not exist');
+    } else {
+        res.status(200).send(basket);
+    }
 });
 
 
