@@ -1,7 +1,7 @@
 [
   {
     "name": "Dog bed",
-    "id": 0,
+    "id": "0",
     "price": 100,
     "animal": "Dog",
     "category": "Accessories",
@@ -12,7 +12,7 @@
   },
   {
     "name": "Dog food - dry",
-    "id": 1,
+    "id": "1",
     "price": 70,
     "animal": "Dog",
     "category": "Food",
@@ -23,7 +23,7 @@
   },
   {
     "name": "Dog collar - Red",
-    "id": 2,
+    "id": "2",
     "price": 120,
     "animal": "Dog",
     "category": "Accessory",
@@ -34,7 +34,7 @@
   },
   {
     "name": "Dog food - wet",
-    "id": 3,
+    "id": "3",
     "price": 370,
     "animal": "Dog",
     "category": "Food",
@@ -45,7 +45,7 @@
   },
   {
     "name": "Dog food - glutenfree",
-    "id": 4,
+    "id": "4",
     "price": 470,
     "animal": "Dog",
     "category": "Food",
@@ -56,7 +56,7 @@
   },
   {
     "name": "Dog toy - squeaker",
-    "id": 5,
+    "id": "5",
     "price": 70,
     "animal": "Dog",
     "category": "Accessory",
@@ -67,7 +67,7 @@
   },
   {
     "name": "Cat bed",
-    "id": 6,
+    "id": "6",
     "price": 150,
     "animal": "Cat",
     "category": "Accessory",
@@ -78,7 +78,7 @@
   },
   {
     "name": "Cat food - dry",
-    "id": 7,
+    "id": "7",
     "price": 140,
     "animal": "Cat",
     "category": "Food",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Cat food - wet",
-    "id": 8,
+    "id": "8",
     "price": 130,
     "animal": "Cat",
     "category": "Food",
@@ -100,7 +100,7 @@
   },
   {
     "name": "Cat toy - snack mouse",
-    "id": 9,
+    "id": "9",
     "price": 30,
     "animal": "Cat",
     "category": "Accessory",
@@ -111,7 +111,7 @@
   },
   {
     "name": "Bird cage",
-    "id": 10,
+    "id": "10",
     "price": 250,
     "animal": "Bird",
     "category": "Accessory",
@@ -122,7 +122,7 @@
   },
   {
     "name": "Bird cage",
-    "id": 11,
+    "id": "11",
     "price": 200,
     "animal": "Bird",
     "category": "Accessory",
@@ -133,7 +133,7 @@
   },
   {
     "name": "Bird Food",
-    "id": 12,
+    "id": "12",
     "price": 110,
     "animal": "Bird",
     "category": "Food",
@@ -144,7 +144,7 @@
   },
   {
     "name": "Rodent cage",
-    "id": 13,
+    "id": "13",
     "price": 140,
     "animal": "Rodent",
     "category": "Accessory",
@@ -155,7 +155,7 @@
   },
   {
     "name": "Rodent Food",
-    "id": 14,
+    "id": "14",
     "price": 100,
     "animal": "Rodent",
     "category": "Food",
@@ -166,7 +166,7 @@
   },
   {
     "name": "Rodent bed",
-    "id": 15,
+    "id": "15",
     "price": 40,
     "animal": "Rodent",
     "category": "Accessory",
@@ -177,7 +177,7 @@
   },
   {
     "name": "Rodent Toy - running wheel",
-    "id": 16,
+    "id": "16",
     "price": 70,
     "animal": "Rodent",
     "category": "toy",
