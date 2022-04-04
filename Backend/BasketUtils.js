@@ -1,8 +1,12 @@
-const Basket = require('./Data/Basket.js');
-const ProductData = require('./Data/ProductData.js');
+// const productData = require('ProductData./Data/js');
+
 const fs = require('fs');
 const path = require("path");
 const basketPath = path.join(__dirname, './Data/Basket.json');
+const productsPath = path.join(__dirname, './Data/ProductData.json');
+
+let products = JSON.parse(fs.readFileSync(productsPath));
+
 
 function getBasket(uuid){
     let data = JSON.parse(fs.readFileSync(basketPath));
@@ -33,7 +37,7 @@ function createBasket(uuid){
 
 function addItemToBasket(uuid, productId, amount = null){
 
-    let item = ProductData.products.filter(product => {return product.id == productId})[0];
+    let item = products.filter(product => {return product.id == productId})[0];
 
     fs.readFile(basketPath, function (err, data) {
 
@@ -54,7 +58,7 @@ function addItemToBasket(uuid, productId, amount = null){
 
 function deleteProductFromBasket(uuid, productId){
     
-    let item = ProductData.products.filter(product => {return product.id == productId})[0];
+    let item = products.filter(product => {return product.id == productId})[0];
 
     fs.readFile(basketPath, function (err, data) {
         let json = JSON.parse(data);

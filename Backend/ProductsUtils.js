@@ -1,5 +1,11 @@
-const productlist = require('./Data/ProductData.js');
-const products = productlist.products;
+// const productlist = require('./Data/ProductData.js');
+// const products = productlist.products;
+
+const fs = require('fs');
+const path = require("path");
+const basketPath = path.join(__dirname, './Data/ProductData.json');
+let products = JSON.parse(fs.readFileSync(basketPath));
+
 
 function getProducts(){
     return products;
