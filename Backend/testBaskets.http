@@ -16,7 +16,7 @@ content-type: application/json
 ###
 
 //essential
-// returns nothing
+// returns nothing, but works!
 // put product 1 into customer 1's basket
 PUT http://localhost:3000/customers/1/basket/1 HTTP/1.1
 #content-type:application/json
