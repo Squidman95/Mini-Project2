@@ -81,20 +81,12 @@ app.get('/customers/:customerId/basket', (req,res) => {         // Essential
     res.send(basketUtils.getBasket(req.params.customerId));
 });
 
-app.put('/customers/:customerId/basket/:productId', (req,res) => {
+app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
     res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productId));
-});
-
-app.delete('/customers/:customerId/basket/:productId', (req,res) => {
-    res.send(basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId));
 });
 
 app.post('/customers/:customerId/basket', (req,res) => {       // Essential
     res.send(basketUtils.createBasket(req.params.customerId));
-});
-
-app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
-    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productID));
 });
 
 app.delete('/customers/:customerId/basket/:productId', (req,res) => {   // Essential
