@@ -34,32 +34,67 @@ app.get('/', getAllCustomers);
 //PRODUCTS
 app.get('/products', (req, res) => {        // Essential
     // res.send('List of products');
-    res.send(productsUtils.getProducts());
+    let products = productsUtils.getProducts();
+    if (products === null || products === undefined) {
+        res.status(500).send('The puppies got loose in the server, so the server is down');
+    } else {
+        res.status(200).send(products);
+    }
 });
 
 app.get('/products/info', (req, res) => {   // Essential
-    res.send(productsUtils.getMultipleProductsInfo());
+    let productsInfo = productsUtils.getMultipleProductsInfo();
+    if (productsInfo === null || productsInfo === undefined) {
+        res.status(500).send('The puppies got loose in the server, so the server is down');
+    } else {
+        res.status(200).send(productsInfo); 
+    }
 });
 
 app.get('/products/:productID', (req, res) => { // Essential
-    res.send(productsUtils.getSingleProductInfo(req.params.productID));
+    let product = productsUtils.getSingleProductInfo(req.params.productID);
+    if (product === null || product === undefined) {
+        res.status(404).send('Product does not exist');
+    } else {
+        res.status(200).send(product);
+    }
 });
 
-app.get('/categories', (req, res) => {          // Essential, doesn't work
-    res.send(productsUtils.getCategories());
+app.get('/categories', (req, res) => { // Essential
+    let productsCat = productsUtils.getCategories();
+    if (productsCat === null || productsCat === undefined) {
+        res.status(404).send('Category does not exist');
+    } else {
+        res.status(200).send(productsCat);
+    }
 });
 
-app.get('/products/category/:category', (req, res) => { // Essential, doesn't work
-    res.send(productsUtils.getCategoryItems(req.params.category));
+app.get('/products/category/:category', (req, res) => { // Essential
+    let categories = productsUtils.getCategoryItems(req.params.category);
+    if (categories === null || categories === undefined) {
+        res.status(500).send('The kitties decided to take a nap, so the server is down');
+    } else {
+        res.status(200).send(categories);
+    }
 });
 
 //CUSTOMERS
 app.get('/customers', (req,res) => {                    // Non-Essential
-    res.send(customerUtils.getAllCustomers());
+    let customers = customerUtils.getAllCustomers();
+    if (customers === null || customers === undefined ) {
+        res.status(404).send('No customers exists');
+    } else {
+        res.send(customers);
+    }
 });
 
 app.get('/customers/:customerId', (req,res) => {        // Essential
-    res.send(customerUtils.getCustomerInfo(req.params.customerId));
+    let customer = customerUtils.getCustomerInfo(req.params.customerId);
+    if(customer === null || customer === undefined ) {
+        res.status(404).send('Customer does not exist');
+    } else {
+        res.status(200).send(customer);
+    }
 });
 
 app.put('/customers/:customerId', (req,res) => {        // Non-Essential
@@ -78,7 +113,12 @@ app.post('/customers/:name/:email/:password', (req,res) => {    // Non-Essential
 
 //BASKET
 app.get('/customers/:customerId/basket', (req,res) => {         // Essential
-    res.send(basketUtils.getBasket(req.params.customerId));
+    let basket = basketUtils.getBasket(req.params.customerId);
+    if (basket === null || basket === undefined) {
+        res.status(404).send('Customer does not exist');
+    } else {
+        res.status(200).send(basket);
+    }
 });
 
 app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
@@ -96,5 +136,7 @@ app.delete('/customers/:customerId/basket/:productId', (req,res) => {   // Essen
 
 // For invalid routes
 app.get('*', (req, res) => {
-    res.send('404! This is an invalid URL.');
+    res.status(404).send('404! This is an invalid URL.');
 });
+
+
