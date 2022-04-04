@@ -15,9 +15,9 @@ app.use((req, res, next) => {
     console.log("A new request received at " + Date.now());
     // This function call tells that more processing is required for the current request and is in the next middlewar function/route handler.
     next();  
- });
+});
 
- app.use('/static', express.static('public'));
+app.use('/static', express.static('public'));
 //  app.use(express.static('files'));
 
 app.listen(3000, () => console.log(`[Info] Server listening at http://${hostname}:${port}/`));
@@ -81,7 +81,15 @@ app.get('/customers/:customerId/basket', (req,res) => {         // Essential
     res.send(basketUtils.getBasket(req.params.customerId));
 });
 
-app.post('/customers/:customerId/basket', (req,res) => {        // Essential
+app.put('/customers/:customerId/basket/:productId', (req,res) => {
+    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productId));
+});
+
+app.delete('/customers/:customerId/basket/:productId', (req,res) => {
+    res.send(basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId));
+});
+
+app.post('/customers/:customerId/basket', (req,res) => {       // Essential
     res.send(basketUtils.createBasket(req.params.customerId));
 });
 
