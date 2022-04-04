@@ -1,6 +1,3 @@
-const userData = require('./Data/UserData.js');
-const users = userData.customers;
-
 const fs = require('fs');
 const path = require("path");
 const userDataPath = path.join(__dirname, './Data/UserData.json');
@@ -12,7 +9,7 @@ function getCustomerInfo(uuid){
 
 function createCustomer(uuid, name, email, password){
     const newUser = {
-        id: uuid,//Math.floor(Math.random() * 100),
+        id: uuid,
         name: name,
         email: email,
         password: password,
@@ -46,11 +43,6 @@ function deleteCustomer(uuid){
     });
 }
 
-// function deleteCustomer(uuid){
-//     userData.removeCustomer(uuid);
-//     return userData.customers;
-// }
-
 function updateCustomer(uuid, name, email, password){
 
     fs.readFile(userDataPath, function (err, data) {
@@ -69,7 +61,6 @@ function updateCustomer(uuid, name, email, password){
 
 function getAllCustomers(){
     return JSON.parse(fs.readFileSync(userDataPath));
-    // return users;
 }
 
 
