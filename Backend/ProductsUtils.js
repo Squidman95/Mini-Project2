@@ -19,4 +19,12 @@ function getCategoryItems(category){
     return products.filter(product => product.category === category);
 }
 
+function getCategories() {
+    let array = products.map((product) => {
+        return {category: product.category};
+    })
+    let categoriesArray = [new Set(array)];
+    return categoriesArray;
+}
+
 module.exports = { getProducts, getMultipleProductsInfo, getSingleProductInfo, getCategoryItems };
