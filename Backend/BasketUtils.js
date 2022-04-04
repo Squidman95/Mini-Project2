@@ -35,8 +35,20 @@ function createBasket(uuid){
     });
 }
 
+function getItemSimple(productId){
+    let product = products.filter(product => {return product.id == productId})[0];
+    let simpleItem = {
+        name: product.name,
+        id: product.id,
+        price: product.price,
+        image: product.image
+    }
+    return simpleItem;
+}
+
 function addItemToBasket(uuid, productId, amount = null){
-    let item = products.filter(product => {return product.id == productId})[0];
+    let item = getItemSimple(productId);
+    // let item = products.filter(product => {return product.id == productId})[0];
     let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
     let basket = json.filter(b => {return b.id == uuid})[0];
     const index = json.map(b => b.id).indexOf(uuid);
