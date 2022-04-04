@@ -39,7 +39,9 @@ function addItemToBasket(uuid, productId, amount = null){
         basket.items.push(item);
         json[index] = basket;    
 
-        fs.writeFile(basketPath, JSON.stringify(json), function(err){
+        // let trendString = JSON.stringify(trendJson, null, 2);
+
+        fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
           if (err) throw err;
           console.log('Basket updated!');
         });
