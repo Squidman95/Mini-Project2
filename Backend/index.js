@@ -38,7 +38,7 @@ app.get('/products', (req, res) => {        // Essential
 });
 
 app.get('/products/info', (req, res) => {   // Essential
-    res.send(productsUtils.getMultipleProductsInfo()); //undone function
+    res.send(productsUtils.getMultipleProductsInfo());
 });
 
 app.get('/products/product/:productID', (req, res) => { // Essential
