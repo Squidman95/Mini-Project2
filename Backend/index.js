@@ -60,7 +60,7 @@ app.get('/customers/:customerId/basket', (req,res) => {
 });
 
 app.put('/customers/:customerId/basket/:productId', (req,res) => {
-    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productID));
+    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productId));
 });
 
 app.delete('/customers/:customerId/basket/:productId', (req,res) => {
@@ -68,6 +68,7 @@ app.delete('/customers/:customerId/basket/:productId', (req,res) => {
 });
 
 app.post('/customers/:customerId/basket', (req,res) => {
+    console.log("bla");
     res.send(basketUtils.createBasket(req.params.customerId));
 });
 
