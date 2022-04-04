@@ -5,7 +5,6 @@ const path = require("path");
 const basketPath = path.join(__dirname, './Data/Basket.json');
 
 function getBasket(uuid){
-    console.log(uuid);
     let data = JSON.parse(fs.readFileSync(basketPath));
     return data.filter(basket => {return basket.id == uuid})[0];
 }
@@ -20,8 +19,8 @@ function createBasket(uuid){
         let json = JSON.parse(data);
         json.push(basket);
         fs.writeFile(basketPath, JSON.stringify(json), function(err){
-          if (err) throw err;
-          console.log('Basket added!');
+            if (err) throw err;
+            console.log('Basket added!');
         });
     });
 }
@@ -40,8 +39,8 @@ function addItemToBasket(uuid, productId, amount = null){
         json[index] = basket;    
 
         fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
-          if (err) throw err;
-          console.log('Basket updated!');
+            if (err) throw err;
+            console.log('Basket updated!');
         });
 
     });
@@ -60,8 +59,8 @@ function deleteProductFromBasket(uuid, productId){
         json[index] = basket;    
 
         fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
-          if (err) throw err;
-          console.log('Item deleted from basket!');
+            if (err) throw err;
+            console.log('Item deleted from basket!');
         });
 
     });
@@ -69,12 +68,12 @@ function deleteProductFromBasket(uuid, productId){
 
 const removeById = (jsonArray, itemId) => {
     const index = jsonArray.findIndex(element => {
-       return element.id === String(itemId);
+        return element.id === String(itemId);
     });
     if(index === -1){
-       return false;
+        return false;
     };
     return !!jsonArray.splice(index, 1);
- };
+};
 
 module.exports = { getBasket, createBasket, addItemToBasket, deleteProductFromBasket };
