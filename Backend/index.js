@@ -49,7 +49,7 @@ app.get('/categories', (req, res) => {          // Essential, doesn't work
     res.send(productsUtils.getCategories());
 });
 
-app.get('/products/:category', (req, res) => { // Essential, doesn't work
+app.get('/products/cateogory/:category', (req, res) => { // Essential, doesn't work
     res.send(productsUtils.getCategoryItems(req.params.category));
 });
 

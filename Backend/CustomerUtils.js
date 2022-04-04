@@ -7,7 +7,7 @@ function getCustomerInfo(uuid){
 
 function createCustomer(name, email, password){
     const newUser = {
-        id: createUniqID(),
+        id: Math.floor(Math.random() * 100),
         name: name,
         email: email,
         password: password,
@@ -21,23 +21,16 @@ function deleteCustomer(uuid){
 }
 
 function updateCustomer(uuid, name, email, password){
-    if (users.filter(user => user.id == uuid)) {
-        const user = users.filter(user => user.id == uuid);
-        user.name = name;
-        user.email = email;
-        user.password = password;
-        return "Update Succesfull";
-    } else {
-        return "Error: User not found"
-    }
+    userData.updateCustomer({
+        id: uuid,
+        name: name,
+        email: email,
+        password: password,
+    });
 }
 
 function getAllCustomers(){
     return users;
-}
-
-function createUniqID(){
-    return Math.floor(Math.random() * 100) + (new Date()).getTime();
 }
 
 
