@@ -36,44 +36,25 @@ function createBasket(uuid){
 }
 
 function addItemToBasket(uuid, productId, amount = null){
-
     let item = products.filter(product => {return product.id == productId})[0];
-
-    fs.readFile(basketPath, function (err, data) {
-
-        let json = JSON.parse(data);
-        let basket = json.filter(b => {return b.id == uuid})[0];
-        const index = json.map(b => b.id).indexOf(uuid);
-
-        basket.items.push(item);
-        json[index] = basket;    
-
-        fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
-            if (err) throw err;
-            console.log('Basket updated!');
-        });
-
-    });
+    let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
+    let basket = json.filter(b => {return b.id == uuid})[0];
+    const index = json.map(b => b.id).indexOf(uuid);
+    basket.items.push(item);
+    json[index] = basket;
+    fs.writeFileSync(basketPath, JSON.stringify(json, null, 2));
+    return basket;
 }
 
 function deleteProductFromBasket(uuid, productId){
-    
     let item = products.filter(product => {return product.id == productId})[0];
-
-    fs.readFile(basketPath, function (err, data) {
-        let json = JSON.parse(data);
-        let basket = json.filter(b => {return b.id == uuid})[0];
-        const index = json.map(b => b.id).indexOf(uuid);
-
-        removeById(basket.items, item.id);
-        json[index] = basket;    
-
-        fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
-            if (err) throw err;
-            console.log('Item deleted from basket!');
-        });
-
-    });
+    let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
+    let basket = json.filter(b => {return b.id == uuid})[0];
+    const index = json.map(b => b.id).indexOf(uuid);
+    removeById(basket.items, item.id);
+    json[index] = basket;
+    fs.writeFileSync(basketPath, JSON.stringify(json, null, 2));
+    return item;
 }
 
 const removeById = (jsonArray, itemId) => {

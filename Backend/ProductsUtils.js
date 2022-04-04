@@ -3,8 +3,8 @@
 
 const fs = require('fs');
 const path = require("path");
-const basketPath = path.join(__dirname, './Data/ProductData.json');
-let products = JSON.parse(fs.readFileSync(basketPath));
+const productsPath = path.join(__dirname, './Data/ProductData.json');
+let products = JSON.parse(fs.readFileSync(productsPath));
 
 
 function getProducts(){
