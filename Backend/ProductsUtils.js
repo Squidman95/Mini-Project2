@@ -26,4 +26,4 @@ function getCategories() {
     return array;
 }
 
-module.exports = { getProducts, getMultipleProductsInfo, getSingleProductInfo, getCategoryItems };
+module.exports = { getProducts, getMultipleProductsInfo, getSingleProductInfo, getCategoryItems, getCategories };
