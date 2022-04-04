@@ -1,14 +1,22 @@
 //get all customers data
 GET http://localhost:3000/customers/ HTTP/1.1
 
+###
+
 //get data from specific customer, here customer id 1
 GET http://localhost:3000/customers/1 HTTP/1.1
+
+###
 
 //add a new customer, here customer id:10
 PUT http://localhost:3000/customers/10 HTTP/1.1
 
+###
+
 //delete customer id:10
 DELETE http://localhost:3000/customers/10 HTTP/1.1
+
+###
 
 //add name, email, password to all customers
 POST http://localhost:3000/customers/10 HTTP/1.1
