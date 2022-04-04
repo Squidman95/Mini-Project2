@@ -1,0 +1,14 @@
+//get all products
+GET http://localhost:3000/products/ HTTP/1.1
+
+//get summarized product info of all products
+GET http://localhost:3000/products/ HTTP/1.1
+
+//get product info for product id:1
+GET http://localhost:3000/products/1 HTTP/1.1
+
+//get summarized info for all categories
+GET http://localhost:3000/categories HTTP/1.1
+
+//get items from category:dog
+GET http://localhost:3000/products/dog HTTP/1.1
