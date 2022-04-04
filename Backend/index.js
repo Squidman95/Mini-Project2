@@ -41,7 +41,7 @@ app.get('/products/info', (req, res) => {   // Essential
     res.send(productsUtils.getMultipleProductsInfo());
 });
 
-app.get('/products/product/:productID', (req, res) => { // Essential
+app.get('/products/:productID', (req, res) => { // Essential
     res.send(productsUtils.getSingleProductInfo(req.params.productID));
 });
 
