@@ -31,66 +31,68 @@ function getAllCustomers(req, res) {
 app.get('/', getAllCustomers);
 
 
+//PRODUCTS
+app.get('/products', (req, res) => {        // Essential
+    // res.send('List of products');
+    res.send(productsUtils.getProducts());
+});
+
+app.get('/products/info', (req, res) => {   // Essential
+    res.send(productsUtils.getMultipleProductsInfo()); //undone function
+});
+
+app.get('/products/product/:productID', (req, res) => { // Essential
+    res.send(productsUtils.getSingleProductInfo(req.params.productID));
+});
+
+app.get('/products/category', (req, res) => { // Essential
+    res.send(productsUtils.getCategories());
+});
+
+app.get('/products/category/:category', (req, res) => { // Essential
+    res.send(productsUtils.getCategoryItems(req.params.category));
+});
+
 //CUSTOMERS
-app.get('/customers', (req,res) => {
+app.get('/customers', (req,res) => {                    // Non-Essential
     res.send(customerUtils.getAllCustomers());
 });
 
-app.get('/customers/:customerId', (req,res) => {
+app.get('/customers/:customerId', (req,res) => {        // Essential
     res.send(customerUtils.getCustomerInfo(req.params.customerId));
 });
 
-app.put('/customers/:customerId', (req,res) => {
+app.put('/customers/:customerId', (req,res) => {        // Non-Essential
     res.send(customerUtils.updateCustomer(req.params.customerId));
 });
 
-app.delete('/customers/:customerId', (req,res) => {
+app.delete('/customers/:customerId', (req,res) => {     // Non-Essential
     res.send(customerUtils.deleteCustomer(req.params.customerId));
 });
 
-app.post('/customers/:name/:email/:password', (req,res) => {
+app.post('/customers/:name/:email/:password', (req,res) => {    // Non-Essential
     res.send(customerUtils.createCustomer(req.params.name, req.params.email, req.params.password));
 });
 
 
 
 //BASKET
-app.get('/customers/:customerId/basket', (req,res) => {
+app.get('/customers/:customerId/basket', (req,res) => {         // Essential
     res.send(basketUtils.getBasket(req.params.customerId));
 });
 
-app.put('/customers/:customerId/basket/:productId', (req,res) => {
-    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productID));
-});
-
-app.delete('/customers/:customerId/basket/:productId', (req,res) => {
-    res.send(basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId));
-});
-
-app.post('/customers/:customerId/basket', (req,res) => {
+app.post('/customers/:customerId/basket', (req,res) => {        // Essential
     res.send(basketUtils.createBasket(req.params.customerId));
 });
 
-
-
-//PRODUCTS
-app.get('/products', (req, res) => {
-    
-    // res.send('List of products');
-    res.send(productsUtils.getProducts());
+app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
+    res.send(basketUtils.addItemToBasket(req.params.customerId, req.params.productID));
 });
 
-app.get('/products/info', (req, res) => {
-    res.send(productsUtils.getMultipleProductsInfo()); //undone function
+app.delete('/customers/:customerId/basket/:productId', (req,res) => {   // Essential
+    res.send(basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId));
 });
 
-app.get('/products/product/:productID', (req, res) => {
-    res.send(productsUtils.getSingleProductInfo(req.params.productID));
-});
-
-app.get('/products/category/:category', (req, res) => {
-    res.send(productsUtils.getCategoryItems(req.params.category));
-});
 
 // For invalid routes
 app.get('*', (req, res) => {
