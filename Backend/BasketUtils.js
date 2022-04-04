@@ -19,20 +19,15 @@ function createBasket(uuid){
         items : [],
     };
 
-    fs.readFile(basketPath, function (err, data) {
-        let json = JSON.parse(data);
-        let basket = json.filter(b => {return b.id == uuid})[0];
-        
-        if(basket !== undefined) {
-            console.log(`Removing old basket for user ${uuid}`);
-            removeById(json, uuid);
-        }
-        json.push(newBasket);
-        fs.writeFile(basketPath, JSON.stringify(json, null, 2), function(err){
-            if (err) throw err;
-            console.log(`Basket added for user ${uuid}`);
-        });
-    });
+    let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
+    let basket = json.filter(b => {return b.id == uuid})[0];
+    if(basket !== undefined) {
+        console.log(`Removing old basket for user ${uuid}`);
+        removeById(json, uuid);
+    }
+    json.push(newBasket);
+    fs.writeFileSync(basketPath, JSON.stringify(json, null, 2));
+    return basket;
 }
 
 function getItemSimple(productId){
@@ -48,7 +43,6 @@ function getItemSimple(productId){
 
 function addItemToBasket(uuid, productId, amount = null){
     let item = getItemSimple(productId);
-    // let item = products.filter(product => {return product.id == productId})[0];
     let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
     let basket = json.filter(b => {return b.id == uuid})[0];
     const index = json.map(b => b.id).indexOf(uuid);
