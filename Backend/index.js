@@ -1,14 +1,17 @@
 const hostname = 'localhost';
 // const hostname = 'http://127.0.0.1';
-const port = 3000;
+const port = 4000;
 
 const express = require('express');
 const app = express();
+var cors = require('cors')
 
 const productsUtils = require('./ProductsUtils.js');
 // import productsUtils from './ProductsUtils';
 const customerUtils = require('./CustomerUtils.js');
 const basketUtils = require('./BasketUtils.js');
+
+app.use(cors());
 
 // Simple request time logger
 app.use((req, res, next) => {
@@ -20,7 +23,7 @@ app.use((req, res, next) => {
 app.use('/static', express.static('public'));
 //  app.use(express.static('files'));
 
-app.listen(3000, () => console.log(`[Info] Server listening at http://${hostname}:${port}/`));
+app.listen(port, () => console.log(`[Info] Server listening at http://${hostname}:${port}/`));
 
 // app.get('/', (req, res) => res.send('Hello World!'));
 
