@@ -81,6 +81,15 @@ app.get('/products/category/:category', (req, res) => { // Essential
     }
 });
 
+app.get('/subcategories', (req, res) => { // Essential
+    let productsSubCat = productsUtils.getSubCategories();
+    if (productsSubCat === null || productsSubCat === undefined) {
+        res.status(404).send('SubCategory does not exist');
+    } else {
+        res.status(200).send(productsSubCat);
+    }
+});
+
 //CUSTOMERS
 app.get('/customers', (req,res) => {                    // Non-Essential
     let customers = customerUtils.getAllCustomers();

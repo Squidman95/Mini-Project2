@@ -33,4 +33,14 @@ function getCategories() {
     return uniqueCategories;
 }
 
-module.exports = { getProducts, getMultipleProductsInfo, getSingleProductInfo, getCategoryItems, getCategories };
+function getSubCategories() {
+    let array = products.map((product) => {
+        return {subcategory: product.subcategory};
+    })
+    let uniqueSubCategories = [...new Set(array.map(item => item.subcategory))];
+    return uniqueSubCategories;
+}
+
+
+
+module.exports = { getProducts, getMultipleProductsInfo, getSingleProductInfo, getCategoryItems, getCategories, getSubCategories};
