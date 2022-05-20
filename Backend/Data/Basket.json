@@ -55,5 +55,9 @@
         "image": "/src/assets/images/dog/dog_seahorse_squeaker.jpg"
       }
     ]
+  },
+  {
+    "id": "undefined",
+    "items": []
   }
 ]
