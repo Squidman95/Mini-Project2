@@ -135,11 +135,11 @@ app.put('/customers/:customerId/basket/:productId', (req,res) => {  // Essential
 
 app.post('/customers/:customerId/basket', (req,res) => {       // Essential
     let basket = basketUtils.createBasket(req.params.customerId);
-    if(basket === null || basket === undefined) {
-        res.status(404).send('Customer does not exists');
-    } else {
+    // if(basket === null || basket === undefined) {
+    //     res.status(404).send('Customer does not exists');
+    // } else {
         res.status(200).send(basket);
-    }
+    // }
 });
 
 app.delete('/customers/:customerId/basket/:productId', (req,res) => {   // Essential
