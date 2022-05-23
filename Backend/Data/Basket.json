@@ -57,23 +57,20 @@
     ]
   },
   {
-    "id": "undefined",
-    "items": []
-  },
-  {
-    "id": "13f5a7f-deac-f1a2-0fad-118fd2ade1b3",
-    "items": []
-  },
-  {
-    "id": "7d102e5-88aa-cf22-af6-d77b45582806",
-    "items": []
-  },
-  {
-    "id": "48103b-356b-bc42-7173-ea57d663f6fa",
-    "items": []
-  },
-  {
-    "id": "a7c622-af40-a673-2a7-bdff0c8d0",
-    "items": []
+    "id": "8",
+    "items": [
+      {
+        "name": "Dog bed",
+        "id": "0",
+        "price": 100,
+        "image": "assets/Images/dog/dog_bed.png"
+      },
+      {
+        "name": "Dog food - dry",
+        "id": "1",
+        "price": 70,
+        "image": "assets/Images/dog/dog_food_glutenfree.png"
+      }
+    ]
   }
 ]

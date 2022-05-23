@@ -123,14 +123,17 @@ app.post('/customers/:customerId/:fname/:lname/:email/:password', (req,res) => {
 
 // Login
 app.get('/customers/:fname/:lname/:email/:password', (req,res) => {
-    let userID = customerUtils.login(req.params.fname, req.params.lname, req.params.email, req.params.password);
-    if (userID === null || userID === undefined) {
+    let loginResp = customerUtils.login(req.params.fname, req.params.lname, req.params.email, req.params.password);
+    if (loginResp.userID === null) {
         console.log("Unable to find user with specified login details");
-        res.status(404).send('Invalid login info');
+        loginResp = {
+            err: 'Invalid login info'
+        };
+        res.status(403).send(loginResp);
     }
     else {
-        console.log(`Found user, returning userID: ${userID}`);
-        res.status(200).send(userID);
+        console.log(`Found user, returning userID: ${loginResp.userID}`);
+        res.status(200).send(loginResp);
     }
     // res.send(customerUtils.login(req.params.fname, req.params.lname, req.params.email, req.params.password));
 });

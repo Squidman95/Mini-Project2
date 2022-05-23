@@ -64,7 +64,9 @@ function updateCustomer(uuid, fname, lname, email, password){
 function login(fname, lname, email, password){
     let jsonData = JSON.parse(fs.readFileSync(userDataPath));
     // var results = [];
-    var userID = null;
+    let loginResp = {
+        userID: null
+    };
     jsonData.forEach(user => {
         if (user.fname === fname && 
             user.lname === lname && 
@@ -72,10 +74,11 @@ function login(fname, lname, email, password){
             user.password === password) {
             
                 // results.push(user);
-                userID = user.id;
+                loginResp.userID = user.id;
+                return loginResp;
         }
     });
-    return userID;
+    return loginResp; // loginResp.userID should be null here
 }
 
 function getAllCustomers(){
