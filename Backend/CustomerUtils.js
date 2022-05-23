@@ -61,6 +61,23 @@ function updateCustomer(uuid, fname, lname, email, password){
     });
 }
 
+function login(fname, lname, email, password){
+    let jsonData = JSON.parse(fs.readFileSync(userDataPath));
+    // var results = [];
+    var userID = null;
+    jsonData.forEach(user => {
+        if (user.fname === fname && 
+            user.lname === lname && 
+            user.email === email && 
+            user.password === password) {
+            
+                // results.push(user);
+                userID = user.id;
+        }
+    });
+    return userID;
+}
+
 function getAllCustomers(){
     return JSON.parse(fs.readFileSync(userDataPath));
 }
@@ -77,4 +94,4 @@ const removeById = (jsonArray, itemId) => {
 };
 
 
-module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer, getAllCustomers}
+module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer, login, getAllCustomers}

@@ -121,6 +121,20 @@ app.post('/customers/:customerId/:fname/:lname/:email/:password', (req,res) => {
     res.send(customerUtils.createCustomer(req.params.customerId, req.params.fname, req.params.lname, req.params.email, req.params.password));
 });
 
+// Login
+app.get('/customers/:fname/:lname/:email/:password', (req,res) => {
+    let userID = customerUtils.login(req.params.fname, req.params.lname, req.params.email, req.params.password);
+    if (userID === null || userID === undefined) {
+        console.log("Unable to find user with specified login details");
+        res.status(404).send('Invalid login info');
+    }
+    else {
+        console.log(`Found user, returning userID: ${userID}`);
+        res.status(200).send(userID);
+    }
+    // res.send(customerUtils.login(req.params.fname, req.params.lname, req.params.email, req.params.password));
+});
+
 
 
 //BASKET

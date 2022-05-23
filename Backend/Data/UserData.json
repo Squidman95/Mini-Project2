@@ -33,5 +33,12 @@
     "lname": "V",
     "email": "somemail@gmail.com",
     "password": "123"
+  },
+  {
+    "id": "8",
+    "fname": "Cool",
+    "lname": "Name",
+    "email": "coolmail@gmail.com",
+    "password": "CoolPassword"
   }
 ]
