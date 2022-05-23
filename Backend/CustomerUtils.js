@@ -66,5 +66,15 @@ function getAllCustomers(){
 }
 
 
+const removeById = (jsonArray, itemId) => {
+    const index = jsonArray.findIndex(element => {
+        return element.id === String(itemId);
+    });
+    if(index === -1){
+        return false;
+    };
+    return !!jsonArray.splice(index, 1);
+};
+
 
 module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer, getAllCustomers}
