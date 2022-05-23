@@ -34,11 +34,24 @@ function getCategories() {
 }
 
 function getSubCategories() {
+    //const result = [];
     let array = products.map((product) => {
-        return {subcategory: product.subcategory};
+        return {
+            subcategory: product.subcategory, 
+            category: product.category
+        };
     })
-    let uniqueSubCategories = [...new Set(array.map(item => item.subcategory))];
-    return uniqueSubCategories;
+    const uniqueSub = [];
+    const unique = array.filter(e => {
+        const isDuplicate = uniqueSub.includes(e.subcategory);
+
+        if (!isDuplicate) {
+            uniqueSub.push(e.subcategory);
+            return true;
+        }
+        return false;
+    })
+    return unique;
 }
 
 

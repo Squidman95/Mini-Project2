@@ -22,7 +22,14 @@ GET http://localhost:3000/products/1 HTTP/1.1
 //essential
 //get summarized info for all categories
 //returns nothing
-GET http://localhost:3000/categories HTTP/1.1
+GET http://localhost:4000/categories HTTP/1.1
+
+###
+
+//essential
+//get summarized info for all subcategories
+//returns nothing
+GET http://localhost:4000/subcategories HTTP/1.1
 
 ###
 
