@@ -109,16 +109,16 @@ app.get('/customers/:customerId', (req,res) => {        // Essential
     }
 });
 
-app.put('/customers/:customerId/:name/:email/:password', (req,res) => {        // Non-Essential
-    res.send(customerUtils.updateCustomer(req.params.customerId, req.params.name, req.params.email, req.params.password));
+app.put('/customers/:customerId/:fname/:lname/:email/:password', (req,res) => {        // Non-Essential
+    res.send(customerUtils.updateCustomer(req.params.customerId, req.params.fname, req.params.lname, req.params.email, req.params.password));
 });
 
 app.delete('/customers/:customerId', (req,res) => {     // Non-Essential
     res.send(customerUtils.deleteCustomer(req.params.customerId));
 });
 
-app.post('/customers/:customerId/:name/:email/:password', (req,res) => {    // Non-Essential
-    res.send(customerUtils.createCustomer(req.params.customerId, req.params.name, req.params.email, req.params.password));
+app.post('/customers/:customerId/:fname/:lname/:email/:password', (req,res) => {
+    res.send(customerUtils.createCustomer(req.params.customerId, req.params.fname, req.params.lname, req.params.email, req.params.password));
 });
 
 

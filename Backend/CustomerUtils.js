@@ -7,10 +7,11 @@ function getCustomerInfo(uuid){
     return data.filter(user => user.id == uuid)[0];
 }
 
-function createCustomer(uuid, name, email, password){
+function createCustomer(uuid, fname, lname, email, password){
     const newUser = {
         id: uuid,
-        name: name,
+        fname: fname,
+        lname: lname,
         email: email,
         password: password,
     }
@@ -43,12 +44,13 @@ function deleteCustomer(uuid){
     });
 }
 
-function updateCustomer(uuid, name, email, password){
+function updateCustomer(uuid, fname, lname, email, password){
 
     fs.readFile(userDataPath, function (err, data) {
         let json = JSON.parse(data);
         const index = json.map(b => b.id).indexOf(parseInt(uuid));
-        json[index].name = name;
+        json[index].fname = fname;
+        json[index].lname = lname;
         json[index].email = email;
         json[index].password = password;
         fs.writeFile(userDataPath, JSON.stringify(json, null, 2), function(err){
