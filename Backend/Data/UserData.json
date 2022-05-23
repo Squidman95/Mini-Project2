@@ -1,26 +1,44 @@
 [
   {
     "id": 0,
-    "name": "bent",
+    "fname": "Bente",
+    "lname": "Bent",
     "email": "bent@basicBitchMail.com",
     "password": "1234"
   },
   {
     "id": 1,
-    "name": "Basic1",
+    "fname": "Basic1",
+    "lname": "Person",
     "email": "basic1@person.com",
     "password": "person"
   },
   {
     "id": 2,
-    "name": "Basic2",
+    "fname": "Basic2",
+    "lname": "Person",
     "email": "basic2@person.com",
     "password": "person"
   },
   {
     "id": 32,
-    "name": "bent",
+    "fname": "Bent",
+    "lname": "Bent",
     "email": "bent@basicBitchMail.com",
     "password": "1234"
+  },
+  {
+    "id": "a7c622-af40-a673-2a7-bdff0c8d0",
+    "fname": "Seb",
+    "lname": "V",
+    "email": "somemail@gmail.com",
+    "password": "123"
+  },
+  {
+    "id": "8",
+    "fname": "Cool",
+    "lname": "Name",
+    "email": "coolmail@gmail.com",
+    "password": "CoolPassword"
   }
 ]

@@ -7,10 +7,11 @@ function getCustomerInfo(uuid){
     return data.filter(user => user.id == uuid)[0];
 }
 
-function createCustomer(uuid, name, email, password){
+function createCustomer(uuid, fname, lname, email, password){
     const newUser = {
         id: uuid,
-        name: name,
+        fname: fname,
+        lname: lname,
         email: email,
         password: password,
     }
@@ -43,12 +44,13 @@ function deleteCustomer(uuid){
     });
 }
 
-function updateCustomer(uuid, name, email, password){
+function updateCustomer(uuid, fname, lname, email, password){
 
     fs.readFile(userDataPath, function (err, data) {
         let json = JSON.parse(data);
         const index = json.map(b => b.id).indexOf(parseInt(uuid));
-        json[index].name = name;
+        json[index].fname = fname;
+        json[index].lname = lname;
         json[index].email = email;
         json[index].password = password;
         fs.writeFile(userDataPath, JSON.stringify(json, null, 2), function(err){
@@ -59,10 +61,37 @@ function updateCustomer(uuid, name, email, password){
     });
 }
 
+function login(fname, lname, email, password){
+    let jsonData = JSON.parse(fs.readFileSync(userDataPath));
+    // var results = [];
+    var userID = null;
+    jsonData.forEach(user => {
+        if (user.fname === fname && 
+            user.lname === lname && 
+            user.email === email && 
+            user.password === password) {
+            
+                // results.push(user);
+                userID = user.id;
+        }
+    });
+    return userID;
+}
+
 function getAllCustomers(){
     return JSON.parse(fs.readFileSync(userDataPath));
 }
 
 
+const removeById = (jsonArray, itemId) => {
+    const index = jsonArray.findIndex(element => {
+        return element.id === String(itemId);
+    });
+    if(index === -1){
+        return false;
+    };
+    return !!jsonArray.splice(index, 1);
+};
 
-module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer, getAllCustomers}
+
+module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer, login, getAllCustomers}
