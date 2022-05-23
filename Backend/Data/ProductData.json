@@ -5,7 +5,7 @@
     "price": 100,
     "animal": "Dog",
     "category": "Accessory",
-    "subcategory": "bed",
+    "subcategory": "Bed",
     "image": "assets/Images/dog/dog_bed.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -16,7 +16,7 @@
     "price": 70,
     "animal": "Dog",
     "category": "Food",
-    "subcategory": "dryfood",
+    "subcategory": "Dryfood",
     "image": "assets/Images/dog/dog_food_glutenfree.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -27,7 +27,7 @@
     "price": 120,
     "animal": "Dog",
     "category": "Accessory",
-    "subcategory": "collar",
+    "subcategory": "Collar",
     "image": "assets/Images/dog/dog_collar.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -38,7 +38,7 @@
     "price": 370,
     "animal": "Dog",
     "category": "Food",
-    "subcategory": "wetfood",
+    "subcategory": "Wetfood",
     "image": "assets/images/dog/dog_food_wet.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -49,7 +49,7 @@
     "price": 470,
     "animal": "Dog",
     "category": "Food",
-    "subcategory": "glutenfreefood",
+    "subcategory": "Glutenfreefood",
     "image": "assets/images/dog/dog_food_glutenfree.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -71,7 +71,7 @@
     "price": 150,
     "animal": "Cat",
     "category": "Accessory",
-    "subcategory": "bed",
+    "subcategory": "Bed",
     "image": "assets/images/cat/cat_bed.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -82,7 +82,7 @@
     "price": 140,
     "animal": "Cat",
     "category": "Food",
-    "subcategory": "dryfood",
+    "subcategory": "Dryfood",
     "image": "assets/images/cat/cat_food_dry.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -93,7 +93,7 @@
     "price": 130,
     "animal": "Cat",
     "category": "Food",
-    "subcategory": "wet",
+    "subcategory": "Wet",
     "image": "assets/images/cat/cat_food_wet.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -115,7 +115,7 @@
     "price": 250,
     "animal": "Bird",
     "category": "Accessory",
-    "subcategory": "cage",
+    "subcategory": "Cage",
     "image": "assets/images/bird/bird_cage1.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -126,7 +126,7 @@
     "price": 200,
     "animal": "Bird",
     "category": "Accessory",
-    "subcategory": "cage",
+    "subcategory": "Cage",
     "image": "assets/images/bird/bird_cage2.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -137,7 +137,7 @@
     "price": 110,
     "animal": "Bird",
     "category": "Food",
-    "subcategory": "dryfood",
+    "subcategory": "Dryfood",
     "image": "assets/images/bird/bird_food.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -148,7 +148,7 @@
     "price": 140,
     "animal": "Rodent",
     "category": "Accessory",
-    "subcategory": "cage",
+    "subcategory": "Cage",
     "image": "assets/images/rodent/rodent_cage.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -159,7 +159,7 @@
     "price": 100,
     "animal": "Rodent",
     "category": "Food",
-    "subcategory": "dryfood",
+    "subcategory": "Dryfood",
     "image": "assets/images/rodent/rodent_food.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -170,7 +170,7 @@
     "price": 40,
     "animal": "Rodent",
     "category": "Accessory",
-    "subcategory": "bed",
+    "subcategory": "Bed",
     "image": "assets/images/rodent/rodent_bed.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -180,8 +180,8 @@
     "id": "16",
     "price": 70,
     "animal": "Rodent",
-    "category": "Toy",
-    "subcategory": "Running Wheel",
+    "category": "Accessory",
+    "subcategory": "Toy",
     "image": "assets/images/rodent/rodent_toy_runningWheel.jpg",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
