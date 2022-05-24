@@ -33,6 +33,8 @@ function getCategories() {
     return uniqueCategories;
 }
 
+
+//returns both subcategories and the category they belong to
 function getSubCategories() {
     //const result = [];
     let array = products.map((product) => {
