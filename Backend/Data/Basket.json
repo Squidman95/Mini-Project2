@@ -6,7 +6,7 @@
         "name": "Dog food - dry",
         "id": "1",
         "price": 70,
-        "image": "https://m.media-amazon.com/images/I/81753eskvxL._AC_SX466_.jpg"
+        "image": "/public/assets/images/dog/dog_food_glutenfree.png"
       }
     ]
   },
@@ -17,13 +17,13 @@
         "name": "Dog food - dry",
         "id": "1",
         "price": 70,
-        "image": "https://m.media-amazon.com/images/I/81753eskvxL._AC_SX466_.jpg"
+        "image": "/public/assets/images/dog/dog_food_glutenfree.png"
       },
       {
         "name": "Dog collar - Red",
         "id": "2",
         "price": 120,
-        "image": "https://www.dfordog.co.uk/user/products/red-dingo-dog-collar-red.jpg"
+        "image": "/public/assets/images/dog/dog_collar.png"
       }
     ]
   },
@@ -34,25 +34,25 @@
         "name": "Dog collar - Red",
         "id": "2",
         "price": 120,
-        "image": "https://www.dfordog.co.uk/user/products/red-dingo-dog-collar-red.jpg"
+        "image": "/public/assets/images/dog/dog_collar.png"
       },
       {
         "name": "Dog food - wet",
         "id": "3",
         "price": 370,
-        "image": "/src/assets/images/dog/dog_food_wet.jpg"
+        "image": "/public/assets/images/dog/dog_food_wet.jpg"
       },
       {
         "name": "Dog food - glutenfree",
         "id": "4",
         "price": 470,
-        "image": "/src/assets/images/dog/dog_food_glutenfree.jpg"
+        "image": "/public/assets/images/dog/dog_food_glutenfree.jpg"
       },
       {
         "name": "Dog toy - squeaker",
         "id": "5",
         "price": 70,
-        "image": "/src/assets/images/dog/dog_seahorse_squeaker.jpg"
+        "image": "/public/assets/images/dog/dog_seahorse_squeaker.jpg"
       }
     ]
   },
@@ -63,22 +63,14 @@
         "name": "Dog bed",
         "id": "0",
         "price": 100,
-        "image": "assets/Images/dog/dog_bed.png"
+        "image": "/public/assets/Images/dog/dog_bed.png"
       },
       {
         "name": "Dog food - dry",
         "id": "1",
         "price": 70,
-        "image": "assets/Images/dog/dog_food_glutenfree.png"
+        "image": "/public/assets/Images/dog/dog_food_glutenfree.png"
       }
     ]
-  },
-  {
-    "id": "undefined",
-    "items": []
-  },
-  {
-    "id": "8b462e2-b030-ccf-68c0-067d20be3de0",
-    "items": []
   }
 ]
