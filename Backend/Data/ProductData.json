@@ -6,7 +6,7 @@
     "animal": "Dog",
     "category": "Accessory",
     "subcategory": "Bed",
-    "image": "assets/Images/dog/dog_bed.png",
+    "image": "assets/images/dog/dog_bed.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
@@ -17,7 +17,7 @@
     "animal": "Dog",
     "category": "Food",
     "subcategory": "Dryfood",
-    "image": "assets/Images/dog/dog_food_glutenfree.png",
+    "image": "assets/images/dog/dog_food_glutenfree.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
@@ -28,7 +28,7 @@
     "animal": "Dog",
     "category": "Accessory",
     "subcategory": "Collar",
-    "image": "assets/Images/dog/dog_collar.png",
+    "image": "assets/images/dog/dog_collar.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
