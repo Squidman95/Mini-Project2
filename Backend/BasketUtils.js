@@ -22,13 +22,15 @@ function createBasket(uuid){
     let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
     let basket = json.filter(b => {return b.id == uuid})[0];
     if(basket === undefined) {
-        json.push(newBasket);
+        basket = newBasket;
+        json.push(basket);
         fs.writeFileSync(basketPath, JSON.stringify(json, null, 2));
     }
     // if(basket !== undefined) {
     //     console.log(`Removing old basket for user ${uuid}`);
     //     removeById(json, uuid);
     // }
+    console.log(basket);
     return basket;
 }
 
@@ -44,6 +46,7 @@ function getItemSimple(productId){
 }
 
 function addItemToBasket(uuid, productId, amount = null){
+    console.log(`Received request to PUT item ${productId} in basket for UID ${uuid}`);
     let item = getItemSimple(productId);
     let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
     let basket = json.filter(b => {return b.id == uuid})[0];
