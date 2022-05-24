@@ -21,12 +21,14 @@ function createBasket(uuid){
 
     let json = JSON.parse(fs.readFileSync(basketPath, {encoding:'utf8', flag:'r'}));
     let basket = json.filter(b => {return b.id == uuid})[0];
-    if(basket !== undefined) {
-        console.log(`Removing old basket for user ${uuid}`);
-        removeById(json, uuid);
+    if(basket === undefined) {
+        json.push(newBasket);
+        fs.writeFileSync(basketPath, JSON.stringify(json, null, 2));
     }
-    json.push(newBasket);
-    fs.writeFileSync(basketPath, JSON.stringify(json, null, 2));
+    // if(basket !== undefined) {
+    //     console.log(`Removing old basket for user ${uuid}`);
+    //     removeById(json, uuid);
+    // }
     return basket;
 }
 
