@@ -40,19 +40,19 @@
         "name": "Dog food - wet",
         "id": "3",
         "price": 370,
-        "image": "/public/assets/images/dog/dog_food_wet.jpg"
+        "image": "/public/assets/images/dog/dog_food_wet.png"
       },
       {
         "name": "Dog food - glutenfree",
         "id": "4",
         "price": 470,
-        "image": "/public/assets/images/dog/dog_food_glutenfree.jpg"
+        "image": "/public/assets/images/dog/dog_food_glutenfree.png"
       },
       {
         "name": "Dog toy - squeaker",
         "id": "5",
         "price": 70,
-        "image": "/public/assets/images/dog/dog_seahorse_squeaker.jpg"
+        "image": "/public/assets/images/dog/dog_seahorse_squeaker.png"
       }
     ]
   },
