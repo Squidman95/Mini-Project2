@@ -40,5 +40,12 @@
     "lname": "Name",
     "email": "coolmail@gmail.com",
     "password": "CoolPassword"
+  },
+  {
+    "id": "8b462e2-b030-ccf-68c0-067d20be3de0",
+    "fname": "s",
+    "lname": "s",
+    "email": "s",
+    "password": "s"
   }
 ]

@@ -10,8 +10,11 @@ const productsUtils = require('./ProductsUtils.js');
 // import productsUtils from './ProductsUtils';
 const customerUtils = require('./CustomerUtils.js');
 const basketUtils = require('./BasketUtils.js');
+const path = require('path');
 
 app.use(cors());
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Simple request time logger
 app.use((req, res, next) => {
@@ -20,12 +23,9 @@ app.use((req, res, next) => {
     next();  
 });
 
-app.use('/static', express.static('public'));
-//  app.use(express.static('files'));
-
 app.listen(port, () => console.log(`[Info] Server listening at http://${hostname}:${port}/`));
 
-// app.get('/', (req, res) => res.send('Hello World!'));
+
 
 function getAllCustomers(req, res) {
 
