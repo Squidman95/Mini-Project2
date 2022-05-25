@@ -5,9 +5,6 @@ const port = 4000;
 const express = require('express');
 const bodyParser = require('body-parser')
 const app = express();
-
-var jsonParser = bodyParser.json();
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var cors = require('cors')
 
 const productsUtils = require('./ProductsUtils.js');
