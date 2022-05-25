@@ -16,7 +16,7 @@
     "price": 70,
     "animal": "Dog",
     "category": "Food",
-    "subcategory": "Dryfood",
+    "subcategory": "Dry",
     "image": "/public/assets/images/dog/dog_food_glutenfree.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -38,7 +38,7 @@
     "price": 370,
     "animal": "Dog",
     "category": "Food",
-    "subcategory": "Wetfood",
+    "subcategory": "Wet",
     "image": "/public/assets/images/dog/dog_food_wet.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -49,7 +49,7 @@
     "price": 470,
     "animal": "Dog",
     "category": "Food",
-    "subcategory": "Glutenfreefood",
+    "subcategory": "Gluten free",
     "image": "/public/assets/images/dog/dog_food_glutenfree.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -82,7 +82,7 @@
     "price": 140,
     "animal": "Cat",
     "category": "Food",
-    "subcategory": "Dryfood",
+    "subcategory": "Dry",
     "image": "/public/assets/images/cat/cat_food_dry.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -137,7 +137,7 @@
     "price": 110,
     "animal": "Bird",
     "category": "Food",
-    "subcategory": "Dryfood",
+    "subcategory": "Dry",
     "image": "/public/assets/images/bird/bird_food.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -159,7 +159,7 @@
     "price": 100,
     "animal": "Rodent",
     "category": "Food",
-    "subcategory": "Dryfood",
+    "subcategory": "Dry",
     "image": "/public/assets/images/rodent/rodent_food.png",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor inc id id unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cup id atat non pro id ent, sunt in culpa qui officia deserunt mollit anim id est laborum."
