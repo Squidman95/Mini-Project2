@@ -42,17 +42,17 @@
     "password": "CoolPassword"
   },
   {
-    "id": "8b462e2-b030-ccf-68c0-067d20be3de0",
-    "fname": "s",
-    "lname": "s",
-    "email": "s@s.com",
-    "password": "s"
-  },
-  {
     "id": "2",
     "fname": "a",
     "lname": "a",
     "email": "a@a.com",
     "password": "a"
+  },
+  {
+    "id": "8b462e2-b030-ccf-68c0-067d20be3de0",
+    "fname": "s",
+    "lname": "s",
+    "email": "s@s.com",
+    "password": "s"
   }
 ]

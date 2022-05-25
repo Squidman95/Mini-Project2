@@ -34,17 +34,6 @@ function createBasket(uuid){
     return basket;
 }
 
-function getItemSimple(productId){
-    let product = products.filter(product => {return product.id == productId})[0];
-    let simpleItem = {
-        name: product.name,
-        id: product.id,
-        price: product.price,
-        image: product.image
-    }
-    return simpleItem;
-}
-
 function addItemToBasket(uuid, productId, amount = null){
     console.log(`Received request to PUT item ${productId} in basket for UID ${uuid}`);
     let item = getItemSimple(productId);
@@ -68,6 +57,7 @@ function deleteProductFromBasket(uuid, productId){
     return item;
 }
 
+// Just utility functions, not queries
 const removeById = (jsonArray, itemId) => {
     const index = jsonArray.findIndex(element => {
         return element.id === String(itemId);
@@ -77,5 +67,16 @@ const removeById = (jsonArray, itemId) => {
     };
     return !!jsonArray.splice(index, 1);
 };
+function getItemSimple(productId){
+    let product = products.filter(product => {return product.id == productId})[0];
+    let simpleItem = {
+        name: product.name,
+        id: product.id,
+        price: product.price,
+        image: product.image
+    }
+    return simpleItem;
+}
+
 
 module.exports = { getBasket, createBasket, addItemToBasket, deleteProductFromBasket };

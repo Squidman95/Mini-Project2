@@ -2,43 +2,6 @@ const fs = require('fs');
 const path = require("path");
 const userDataPath = path.join(__dirname, './Data/UserData.json');
 
-function getCustomerInfo(uuid){
-    let data = JSON.parse(fs.readFileSync(userDataPath));
-    return data.filter(user => user.id == uuid)[0];
-}
-
-function deleteCustomer(uuid){
-    fs.readFile(userDataPath, function (err, data) {
-        let json = JSON.parse(data);
-        const index = json.map(b => b.id).indexOf(parseInt(uuid));
-        json.splice(index, 1);
-        fs.writeFile(userDataPath, JSON.stringify(json, null, 2), function(err){
-            if (err) throw err;
-            console.log('User has been deleted');
-        });
-    });
-}
-
-function updateCustomer(uuid, fname, lname, email, password){
-    fs.readFile(userDataPath, function (err, data) {
-        let json = JSON.parse(data);
-        const index = json.map(b => b.id).indexOf(parseInt(uuid));
-        json[index].fname = fname;
-        json[index].lname = lname;
-        json[index].email = email;
-        json[index].password = password;
-        fs.writeFile(userDataPath, JSON.stringify(json, null, 2), function(err){
-            if (err) throw err;
-            console.log('User has been updated');
-        });
-
-    });
-}
-
-function getAllCustomers(){
-    return JSON.parse(fs.readFileSync(userDataPath));
-}
-
 function createCustomer(userData){
     let uuid = userData.id;
     fs.readFile(userDataPath, function (err, data) {
@@ -74,6 +37,7 @@ function login(userData){
     return loginResp; // loginResp.userID should be null here
 }
 
+// Just a utility function, not a query
 const removeById = (jsonArray, itemId) => {
     const index = jsonArray.findIndex(element => {
         return element.id === String(itemId);
@@ -84,4 +48,43 @@ const removeById = (jsonArray, itemId) => {
     return !!jsonArray.splice(index, 1);
 };
 
-module.exports = {getCustomerInfo, createCustomer, deleteCustomer, updateCustomer, login, getAllCustomers}
+module.exports = {createCustomer, login}
+
+// function getCustomerInfo(uuid){
+//     let data = JSON.parse(fs.readFileSync(userDataPath));
+//     return data.filter(user => user.id == uuid)[0];
+// }
+
+// function deleteCustomer(uuid){
+//     fs.readFile(userDataPath, function (err, data) {
+//         let json = JSON.parse(data);
+//         const index = json.map(b => b.id).indexOf(parseInt(uuid));
+//         json.splice(index, 1);
+//         fs.writeFile(userDataPath, JSON.stringify(json, null, 2), function(err){
+//             if (err) throw err;
+//             console.log('User has been deleted');
+//         });
+//     });
+// }
+
+// function updateCustomer(uuid, fname, lname, email, password){
+//     fs.readFile(userDataPath, function (err, data) {
+//         let json = JSON.parse(data);
+//         const index = json.map(b => b.id).indexOf(parseInt(uuid));
+//         json[index].fname = fname;
+//         json[index].lname = lname;
+//         json[index].email = email;
+//         json[index].password = password;
+//         fs.writeFile(userDataPath, JSON.stringify(json, null, 2), function(err){
+//             if (err) throw err;
+//             console.log('User has been updated');
+//         });
+
+//     });
+// }
+
+// function getAllCustomers(){
+//     return JSON.parse(fs.readFileSync(userDataPath));
+// }
+
+// module.exports = {createCustomer, login, getCustomerInfo, deleteCustomer, updateCustomer, getAllCustomers}
