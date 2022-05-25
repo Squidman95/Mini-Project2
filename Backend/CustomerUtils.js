@@ -4,33 +4,49 @@ const userDataPath = path.join(__dirname, './Data/UserData.json');
 
 function createCustomer(userData){
     let uuid = userData.id;
-    fs.readFile(userDataPath, function (err, data) {
-        let json = JSON.parse(data);
-        let user = json.filter(u => {return u.id == uuid})[0];
-        
-        if(user !== undefined) {
-            console.log(`Removing old user with id ${uuid}`);
-            removeById(json, uuid);
-        }
-        json.push(userData);
-        fs.writeFile(userDataPath, JSON.stringify(json, null, 2), function(err){
-            if (err) throw err;
-            console.log(`User with id ${uuid} added`);
+    let json = JSON.parse(fs.readFileSync(userDataPath, {encoding:'utf8', flag:'r'}));
+    console.log("Checking if user exists in database:");
+    let user = json.filter(u => {return u.id == uuid})[0];
+    if(user !== undefined) {
+        let index = json.findIndex(function(item, i) {
+            return item.id === uuid;
         });
-    });
+    
+        json[index].user = {
+            fname: userData.fname,
+            lname: userData.lname,
+            email: userData.email,
+            password: userData.password,
+        };
+    }
+    else {
+        console.log("No user/basket exists. THIS SHOULDN'T HAPPEN. Creating a new one anyway.");
+        let newUserBasket = {
+            id: uuid,
+            user: {
+                fname: userData.fname,
+                lname: userData.lname,
+                email: userData.email,
+                password: userData.password,
+            },
+            items: [],
+        };
+        json.push(newUserBasket);
+    }
+    fs.writeFileSync(userDataPath, JSON.stringify(json, null, 2));
 }
 
 function login(userData){
-    let jsonData = JSON.parse(fs.readFileSync(userDataPath));
+    let jsonData = JSON.parse(fs.readFileSync(userDataPath, {encoding:'utf8', flag:'r'}));
     let loginResp = {
         userID: null
     };
-    jsonData.forEach(user => {
-        if (user.fname === userData.fname && 
-            user.lname === userData.lname && 
-            user.email === userData.email && 
-            user.password === userData.password) {
-                loginResp.userID = user.id;
+    jsonData.forEach(item => {
+        if (item.user.fname === userData.fname && 
+            item.user.lname === userData.lname && 
+            item.user.email === userData.email && 
+            item.user.password === userData.password) {
+                loginResp.userID = item.id;
                 return loginResp;
         }
     });
@@ -38,15 +54,15 @@ function login(userData){
 }
 
 // Just a utility function, not a query
-const removeById = (jsonArray, itemId) => {
-    const index = jsonArray.findIndex(element => {
-        return element.id === String(itemId);
-    });
-    if(index === -1){
-        return false;
-    };
-    return !!jsonArray.splice(index, 1);
-};
+// const removeById = (jsonArray, itemId) => {
+//     const index = jsonArray.findIndex(element => {
+//         return element.id === String(itemId);
+//     });
+//     if(index === -1){
+//         return false;
+//     };
+//     return !!jsonArray.splice(index, 1);
+// };
 
 module.exports = {createCustomer, login}
 
@@ -79,7 +95,6 @@ module.exports = {createCustomer, login}
 //             if (err) throw err;
 //             console.log('User has been updated');
 //         });
-
 //     });
 // }
 
