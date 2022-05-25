@@ -3,7 +3,11 @@ const hostname = 'localhost';
 const port = 4000;
 
 const express = require('express');
+const bodyParser = require('body-parser')
 const app = express();
+
+var jsonParser = bodyParser.json();
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 var cors = require('cors')
 
 const productsUtils = require('./ProductsUtils.js');
@@ -13,8 +17,8 @@ const basketUtils = require('./BasketUtils.js');
 const path = require('path');
 
 app.use(cors());
-
 app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use(express.json({extended: false}));
 
 // Simple request time logger
 app.use((req, res, next) => {
@@ -117,13 +121,14 @@ app.delete('/customers/:customerId', (req,res) => {     // Non-Essential
     res.send(customerUtils.deleteCustomer(req.params.customerId));
 });
 
-app.post('/customers/:customerId/:fname/:lname/:email/:password', (req,res) => {
-    res.send(customerUtils.createCustomer(req.params.customerId, req.params.fname, req.params.lname, req.params.email, req.params.password));
+// Signup
+app.post('/customers/signup', (req,res) => {
+    res.send(customerUtils.createCustomer(req.body));
 });
 
 // Login
-app.get('/customers/:fname/:lname/:email/:password', (req,res) => {
-    let loginResp = customerUtils.login(req.params.fname, req.params.lname, req.params.email, req.params.password);
+app.post('/customers/login', (req,res) => {
+    let loginResp = customerUtils.login(req.body);
     if (loginResp.userID === null) {
         console.log("Unable to find user with specified login details");
         loginResp = {
@@ -135,10 +140,7 @@ app.get('/customers/:fname/:lname/:email/:password', (req,res) => {
         console.log(`Found user, returning userID: ${loginResp.userID}`);
         res.status(200).send(loginResp);
     }
-    // res.send(customerUtils.login(req.params.fname, req.params.lname, req.params.email, req.params.password));
 });
-
-
 
 //BASKET
 app.get('/customers/:customerId/basket', (req,res) => {         // Essential
