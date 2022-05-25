@@ -53,6 +53,12 @@
         "id": "5",
         "price": 70,
         "image": "/public/assets/images/dog/dog_seahorse_squeaker.png"
+      },
+      {
+        "name": "Rodent Toy - running wheel",
+        "id": "16",
+        "price": 70,
+        "image": "/public/assets/images/rodent/rodent_toy_runningWheel.png"
       }
     ]
   },
@@ -75,6 +81,25 @@
   },
   {
     "id": "8b462e2-b030-ccf-68c0-067d20be3de0",
-    "items": []
+    "items": [
+      {
+        "name": "Dog bed",
+        "id": "0",
+        "price": 100,
+        "image": "/public/assets/images/dog/dog_bed.png"
+      },
+      {
+        "name": "Dog food - dry",
+        "id": "1",
+        "price": 70,
+        "image": "/public/assets/images/dog/dog_food_glutenfree.png"
+      },
+      {
+        "name": "Dog collar - Red",
+        "id": "2",
+        "price": 120,
+        "image": "/public/assets/images/dog/dog_collar.png"
+      }
+    ]
   }
 ]

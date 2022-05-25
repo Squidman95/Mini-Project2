@@ -32,7 +32,7 @@ app.get('/', getAllCustomers);
 
 
 //BASKET
-app.get('/customers/:customerId/basket', (req,res) => {
+app.get('/basket/:customerId', (req,res) => {
     let basket = basketUtils.getBasket(req.params.customerId);
     if (basket === null || basket === undefined) {
         res.status(404).send('Customer does not exist');
@@ -41,7 +41,7 @@ app.get('/customers/:customerId/basket', (req,res) => {
     }
 });
 
-app.post('/customers/:customerId/basket', (req,res) => {
+app.post('/basket/:customerId', (req,res) => {
     let basket = basketUtils.createBasket(req.params.customerId);
     // if(basket === null || basket === undefined) {
     //     res.status(404).send('Customer does not exists');
@@ -50,7 +50,7 @@ app.post('/customers/:customerId/basket', (req,res) => {
     // }
 });
 
-app.put('/customers/:customerId/basket/:productId', (req,res) => {
+app.put('/basket/:customerId/:productId', (req,res) => {
     let basketProduct = basketUtils.addItemToBasket(req.params.customerId, req.params.productId);
     if (basketProduct === null || basketProduct === undefined) {
         res.status(404).send('Customer or product does not exists');
@@ -60,7 +60,7 @@ app.put('/customers/:customerId/basket/:productId', (req,res) => {
 });
 
 
-app.delete('/customers/:customerId/basket/:productId', (req,res) => {
+app.delete('/basket/:customerId/:productId', (req,res) => {
     let basket = basketUtils.deleteProductFromBasket(req.params.customerId, req.params.productId);
     if(basket === null || basket === undefined) {
         res.status(404).send('Customer or product does not exist');
