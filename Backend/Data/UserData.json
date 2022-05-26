@@ -1,58 +1,71 @@
 [
   {
-    "id": 0,
-    "fname": "Bente",
-    "lname": "Bent",
-    "email": "bent@basicBitchMail.com",
-    "password": "1234"
+    "id": "1234",
+    "user": {
+      "fname": "t",
+      "lname": "t",
+      "email": "t@t.com",
+      "password": "t"
+    },
+    "items": [
+      {
+        "name": "Dog food - dry",
+        "id": "1",
+        "price": 70,
+        "image": "/public/assets/images/dog/dog_food_glutenfree.png"
+      },
+      {
+        "name": "Dog collar - Red",
+        "id": "2",
+        "price": 120,
+        "image": "/public/assets/images/dog/dog_collar.png"
+      }
+    ]
   },
   {
-    "id": 1,
-    "fname": "Basic1",
-    "lname": "Person",
-    "email": "basic1@person.com",
-    "password": "person"
-  },
-  {
-    "id": 2,
-    "fname": "Basic2",
-    "lname": "Person",
-    "email": "basic2@person.com",
-    "password": "person"
-  },
-  {
-    "id": 32,
-    "fname": "Bent",
-    "lname": "Bent",
-    "email": "bent@basicBitchMail.com",
-    "password": "1234"
-  },
-  {
-    "id": "a7c622-af40-a673-2a7-bdff0c8d0",
-    "fname": "Seb",
-    "lname": "V",
-    "email": "somemail@gmail.com",
-    "password": "123"
-  },
-  {
-    "id": "8",
-    "fname": "Cool",
-    "lname": "Name",
-    "email": "coolmail@gmail.com",
-    "password": "CoolPassword"
-  },
-  {
-    "id": "2",
-    "fname": "a",
-    "lname": "a",
-    "email": "a@a.com",
-    "password": "a"
+    "id": "49",
+    "user": {
+      "fname": "q",
+      "lname": "q",
+      "email": "q@q.com",
+      "password": "q"
+    },
+    "items": [
+      {
+        "name": "Dog food - dry",
+        "id": "1",
+        "price": 70,
+        "image": "/public/assets/images/dog/dog_food_glutenfree.png"
+      }
+    ]
   },
   {
     "id": "8b462e2-b030-ccf-68c0-067d20be3de0",
-    "fname": "s",
-    "lname": "s",
-    "email": "s@s.com",
-    "password": "s"
+    "user": {
+      "fname": "s",
+      "lname": "s",
+      "email": "s@s.com",
+      "password": "s"
+    },
+    "items": [
+      {
+        "name": "Dog bed",
+        "id": "0",
+        "price": 100,
+        "image": "/public/assets/images/dog/dog_bed.png"
+      },
+      {
+        "name": "Dog food - dry",
+        "id": "1",
+        "price": 70,
+        "image": "/public/assets/images/dog/dog_food_glutenfree.png"
+      },
+      {
+        "name": "Dog food - wet",
+        "id": "3",
+        "price": 370,
+        "image": "/public/assets/images/dog/dog_food_wet.png"
+      }
+    ]
   }
 ]
