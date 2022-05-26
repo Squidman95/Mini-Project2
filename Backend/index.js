@@ -101,6 +101,15 @@ app.get('/products', (req, res) => {
     }
 });
 
+app.get('/animals', (req, res) => {
+    let productsAnimal = productsUtils.getAnimals();
+    if (productsAnimal === null || productsAnimal === undefined) {
+        res.status(404).send('Category does not exist');
+    } else {
+        res.status(200).send(productsAnimal);
+    }
+});
+
 app.get('/categories', (req, res) => {
     let productsCat = productsUtils.getCategories();
     if (productsCat === null || productsCat === undefined) {

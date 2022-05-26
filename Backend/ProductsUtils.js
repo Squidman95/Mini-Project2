@@ -14,6 +14,14 @@ function getSingleProductInfo(itemId){
     return products.filter(product => product.id === itemId);
 }
 
+function getAnimals() {
+    let array = products.map((product) => {
+        return {animal: product.animal};
+    })
+    let uniqueAnimals = [...new Set(array.map(item => item.animal))];
+    return uniqueAnimals;
+}
+
 function getCategories() {
     let array = products.map((product) => {
         return {category: product.category};
@@ -43,7 +51,7 @@ function getSubCategories() {
     return unique;
 }
 
-module.exports = { getProducts, getCategories, getSubCategories, getSingleProductInfo};
+module.exports = { getProducts, getAnimals, getCategories, getSubCategories, getSingleProductInfo};
 
 // function getMultipleProductsInfo(){
 //     return products.map((product) => {
